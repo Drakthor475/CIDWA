@@ -24,7 +24,7 @@ flex-direction: column;
       rgba(8, 11, 20, 0.72) 48%,
       rgba(8, 11, 20, 0.15) 100%
     ),
-    url("/public/fondo.png");
+    url("./public/fondo.png");
 
   background-size: cover;
   background-position: top;
@@ -46,7 +46,7 @@ flex-direction: column;
     width: 300px;
     height: 275px;
     margin-left: 180px;
-    margin-top: 20px    ;
+    margin-top: 20px;
     border: 1.4px solid #a855f7;
     border-radius: 24px;
 
