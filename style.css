@@ -1,0 +1,834 @@
+body{
+margin:0;
+background: black;
+}
+.main-conteiner{
+display: flex;
+flex-direction: column;
+
+
+}
+.conteiner-profile{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height:320px;
+  border-radius: 24px;
+  background-color: #080b14;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      #080b14 0%,
+      rgba(8, 11, 20, 0.95) 25%,
+      rgba(8, 11, 20, 0.72) 48%,
+      rgba(8, 11, 20, 0.15) 100%
+    ),
+    url("./public/fondo.png");
+
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+  
+}
+.profile-img{
+    width: 300px;
+    height: 275px;
+    margin-left: 180px;
+    margin-top: 20px;
+    border: 1.4px solid #a855f7;
+    border-radius: 24px;
+
+  box-shadow:
+    0 0 8px rgba(168, 85, 247, 0.45),
+    0 0 20px rgba(168, 85, 247, 0.20);
+
+}
+.profile-img img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* ===== TEXTO DEL PERFIL ===== */
+.profile-text {
+    position: relative;
+    z-index: 2;
+    margin-left: 50px;
+    max-width: 650px;
+    line-height: 1.9;
+    font-family: "Inter", sans-serif;
+    color: #E5E7EB;
+}
+
+/* Saludo */
+.profile-text h5 {
+    margin: 0 0 8px;
+    color: #9CA3AF;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Nombre */
+.profile-text h1 {
+    margin: 0 0 18px;
+    color: #F9FAFB;
+    font-family: "Cinzel", serif;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+/* Apellido morado animado */
+.profile-text .apellido {
+    background: linear-gradient(
+        90deg,
+        #C084FC,
+        #9333EA,
+        #E879F9,
+        #A855F7,
+        #C084FC
+    );
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    animation: apellidoGlow 6s linear infinite;
+}
+
+@keyframes apellidoGlow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+/* Frase */
+.profile-text .frase {
+    display: block;
+    margin: 0 0 22px;
+
+    color: #FFFFFF;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1rem, 1.8vw, 0.35rem);
+    font-weight: 600;
+    font-style: italic;
+    line-height: 1.8;
+
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.55),
+        0 0 14px rgba(192, 132, 252, 0.35);
+}
+
+/* Carrera */
+.profile-text p {
+    margin: 0 0 22px;
+    color: #A1A1AA;
+    font-size: 1rem;
+    line-height: 0.8;
+}
+
+/* Lista de cualidades */
+.profile-text ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Elementos de la lista */
+.profile-text li {
+    position: relative;
+    padding-left: 24px;
+    color: #9CA3AF;
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Distintivo morado */
+.profile-text li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #A855F7;
+    text-shadow: 0 0 8px rgba(168, 85, 247, 0.7);
+}
+
+/* Efecto al pasar el cursor */
+.profile-text li:hover {
+    color: #E9D5FF;
+    transform: translateX(5px);
+}
+
+/* Respeto por la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    .profile-text .apellido {
+        animation: none;
+    }
+
+    .profile-text li {
+        transition: none;
+    }
+}
+
+/* Evita que padding y bordes aumenten el ancho calculado */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Panel principal */
+.conteiner-habilidades {
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+    padding: clamp(20px, 3vw, 40px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    color: #E5E7EB;
+    font-family: "Inter", sans-serif;
+
+    background: linear-gradient(
+        145deg,
+        #171824 0%,
+        #11121D 55%,
+        #15101F 100%
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Título */
+.conteiner-habilidades h2 {
+    margin: 0;
+    color: #C084FC;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+.conteiner-habilidades h2 span {
+    display: block;
+    margin-top: 8px;
+    color: #9CA3AF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Distribución de las tarjetas */
+.lista-herramientas {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Tarjeta individual */
+.herramientas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 14px;
+
+    background: rgba(17, 24, 39, 0.75);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 14px;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.herramientas:hover {
+    background: linear-gradient(145deg, #211932, #171326);
+    border-color: rgba(168, 85, 247, 0.65);
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Logo: ya no ocupa 120px de ancho */
+.herramientas > img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    object-fit: contain;
+}
+
+/* Información de cada tecnología */
+.herramienta-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.herramienta-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 9px;
+    min-width: 0;
+}
+
+.herramienta-titulo h3 {
+    margin: 0;
+    color: #D1D5DB;
+    font-size: 13px;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.herramienta-titulo span {
+    flex-shrink: 0;
+    color: #C084FC;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Barra de porcentaje */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #292436;
+}
+
+.progress {
+    width: var(--porcentaje);
+    height: 100%;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #7C3AED,
+        #C084FC,
+        #E879F9
+    );
+
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Portátiles y ventanas medianas */
+@media (max-width: 1100px) {
+    .lista-herramientas {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Tabletas */
+@media (max-width: 760px) {
+    .lista-herramientas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .conteiner-habilidades {
+        padding: 18px;
+        gap: 16px;
+    }
+
+    .lista-herramientas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .herramientas {
+        padding: 12px;
+    }
+}
+
+
+/* ===== GUSTOS E INTERESES ===== */
+
+.container-gustos {
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+    padding: clamp(20px, 3vw, 40px);
+
+    color: #E5E7EB;
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(126, 34, 206, 0.10),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            #171824,
+            #0D0D16 60%,
+            #15101F
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Encabezado */
+.container-gustos > h2 {
+    margin: 0 0 24px;
+    color: #C084FC;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.container-gustos > h2 span {
+    display: block;
+    margin-top: 8px;
+    color: #9CA3AF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Distribución de tarjetas */
+.lista-gustos {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Tarjeta */
+.gusto-card {
+    min-width: 0;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #171824,
+        #11121D 65%,
+        #191326
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Imagen */
+.gusto-imagen {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    background: #11121D;
+}
+
+.gusto-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(13, 13, 22, 0.85) 100%
+    );
+
+    pointer-events: none;
+}
+
+.gusto-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+/* Número superpuesto */
+.gusto-numero {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+
+    color: #E9D5FF;
+    font-family: "Cinzel", serif;
+    font-size: 12px;
+
+    background: rgba(17, 18, 29, 0.8);
+    border: 1px solid rgba(192, 132, 252, 0.45);
+    border-radius: 6px;
+    padding: 5px 8px;
+}
+
+/* Texto */
+.gusto-info {
+    padding: 16px;
+}
+
+.gusto-info h3 {
+    margin: 0 0 10px;
+    color: #E9D5FF;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gusto-info p {
+    margin: 0 0 16px;
+    color: #9CA3AF;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Etiquetas */
+.gusto-etiqueta {
+    display: inline-block;
+    padding: 5px 9px;
+
+    color: #C084FC;
+    font-size: 11px;
+    font-weight: 500;
+
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 6px;
+}
+
+/* Hover */
+.gusto-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(192, 132, 252, 0.7);
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(168, 85, 247, 0.10);
+}
+
+.gusto-card:hover .gusto-imagen img {
+    transform: scale(1.06);
+}
+
+/* Pantallas medianas */
+@media (max-width: 1100px) {
+    .lista-gustos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Tabletas */
+@media (max-width: 760px) {
+    .lista-gustos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+    .container-gustos {
+        padding: 18px;
+    }
+
+    .lista-gustos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .gusto-imagen {
+        height: 180px;
+    }
+}
+
+
+/* ===== METAS Y OBJETIVOS ===== */
+
+.container-metas {
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+    padding: clamp(20px, 3vw, 40px);
+
+    color: #E5E7EB;
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(126, 34, 206, 0.10),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            #171824,
+            #0D0D16 60%,
+            #15101F
+        );
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+/* Título del apartado */
+.container-metas > h2 {
+    margin: 0 0 24px;
+    color: #C084FC;
+    font-family: "Cinzel", serif;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+
+.container-metas > h2 span {
+    display: block;
+    margin-top: 8px;
+    color: #9CA3AF;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Distribución de las tarjetas */
+.lista-metas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Tarjeta individual */
+.meta-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    min-width: 0;
+    padding: 22px 18px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(30, 27, 46, 0.95),
+        rgba(17, 18, 29, 0.98)
+    );
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 14px;
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Brillo decorativo en la parte superior */
+.meta-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #7C3AED,
+        #E879F9,
+        transparent
+    );
+
+    opacity: 0.7;
+}
+
+/* Número de cada meta */
+.meta-numero {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+
+    color: rgba(192, 132, 252, 0.55);
+    font-family: "Cinzel", serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Icono decorativo */
+.meta-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    color: #D8B4FE;
+    font-size: 25px;
+
+    background: rgba(126, 34, 206, 0.18);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    border-radius: 12px;
+
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.08);
+}
+
+/* Contenido de las tarjetas */
+.meta-info {
+    width: 100%;
+    min-width: 0;
+}
+
+.meta-info h3 {
+    margin: 0 0 10px;
+    color: #E9D5FF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.meta-info p {
+    margin: 0 0 16px;
+    color: #9CA3AF;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Etiqueta inferior */
+.meta-etiqueta {
+    display: inline-block;
+    padding: 5px 9px;
+
+    color: #C4B5FD;
+    font-size: 11px;
+    font-weight: 500;
+
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    border-radius: 6px;
+}
+
+/* Efecto al pasar el cursor */
+.meta-card:hover {
+    transform: translateY(-5px);
+
+    background: linear-gradient(
+        145deg,
+        #211932,
+        #15101F
+    );
+
+    border-color: rgba(192, 132, 252, 0.7);
+
+    box-shadow:
+        0 8px 28px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(168, 85, 247, 0.10);
+}
+
+.meta-card:hover .meta-icono {
+    color: #FFFFFF;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.25);
+}
+
+/* Frase final */
+.frase-metas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 24px;
+    padding-top: 20px;
+
+    color: #9CA3AF;
+    font-family: "Cinzel", serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.8;
+
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.frase-metas > span {
+    color: #C084FC;
+    font-size: 38px;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.5);
+}
+
+/* Pantallas medianas */
+@media (max-width: 1050px) {
+    .lista-metas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Móviles */
+@media (max-width: 520px) {
+    .container-metas {
+        padding: 18px;
+    }
+
+    .lista-metas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .meta-card {
+        padding: 20px 16px;
+    }
+}
