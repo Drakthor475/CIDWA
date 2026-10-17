@@ -11,7 +11,7 @@ Por ejemplo, imagina que tenemos tres elementos HTML: un título, un párrafo y 
 
 Un elemento de tipo `block` comienza normalmente en una nueva línea y ocupa todo el ancho disponible de su contenedor, salvo que se limite su anchura.
 
-![[Pasted image 20261014172110.png]]
+![Pasted image 20261014172110](Img/Pasted%20image%2020261014172110.png)
 
 - Para crear contenedores y secciones.
     
@@ -23,7 +23,7 @@ Un elemento de tipo `block` comienza normalmente en una nueva línea y ocupa tod
 
 Un elemento `inline` permanece dentro del flujo del texto. Ocupa el espacio necesario para su contenido y puede compartir la misma línea con otros elementos.
 
-![[Pasted image 20261014172323.png]]
+![Pasted image 20261014172323](Img/Pasted%20image%2020261014172323.png)
 
 - Para resaltar palabras.
     
@@ -34,7 +34,7 @@ Un elemento `inline` permanece dentro del flujo del texto. Ocupa el espacio nece
 
 Combina características de los dos anteriores: el elemento puede compartir una línea con otros, pero permite establecer dimensiones como un bloque.
 
-![[Pasted image 20261014172506.png]]
+![Pasted image 20261014172506](Img/Pasted%20image%2020261014172506.png)
 
 - Para etiquetas pequeñas.
     
@@ -63,7 +63,7 @@ El elemento sigue el flujo normal del documento. Las propiedades `top`, `right`,
 
 El elemento conserva su espacio original en la página, pero puedes desplazarlo visualmente respecto a su posición inicial.
 
-![[Pasted image 20261014173040.png]]
+![Pasted image 20261014173040](Img/Pasted%20image%2020261014173040.png)
 
 ¿Como se desplaza?
 ```css
@@ -88,14 +88,14 @@ Normalmente, el elemento se posiciona respecto al ancestro más cercano que esta
 
 La etiqueta se coloca en una esquina de la tarjeta y no necesita empujar el título hacia abajo.
 
-![[Pasted image 20261014182308.png]]
+![Pasted image 20261014182308](Img/Pasted%20image%2020261014182308.png)
 
 
 ###  `position: fixed`
 
 Posiciona el elemento respecto al área de visualización, normalmente la ventana del navegador. No reserva su espacio en el flujo normal y permanece en esa ubicación al desplazarse la página, salvo situaciones especiales relacionadas con sus ancestros.
 
-![[Pasted image 20261014182616.png]]
+![Pasted image 20261014182616](Img/Pasted%20image%2020261014182616.png)
 
 ## `position: sticky`
 

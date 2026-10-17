@@ -5,7 +5,7 @@ Imagina que tienes tres tarjetas de cursos. Sin un sistema de distribución adec
 
 **Flexbox permite controlar esa distribución desde el contenedor padre.  
 
-![[Pasted image 20261014183906.png]]
+![Pasted image 20261014183906](Img/Pasted%20image%2020261014183906.png)
 
 La diferencia principal es que Flexbox permite controlar la relación entre varios elementos sin tener que posicionar cada uno por separado.
 ## Concepto padre e hijos
@@ -43,7 +43,7 @@ Ejemplo: opciones de un menú lateral.
 Los elementos se colocan horizontalmente. Es el valor predeterminado.
 
 
-![[Pasted image 20261014184207.png]]
+![Pasted image 20261014184207](Img/Pasted%20image%2020261014184207.png)
 
 También existen `row-reverse` y `column-reverse`, que invierten el orden visual.
 
@@ -117,13 +117,13 @@ Por defecto, Flexbox intenta mantener todos los elementos en una misma línea. L
 
 Los elementos permanecen en una sola línea. Si no caben, Flexbox puede reducir sus dimensiones cuando sea posible. Si no pueden reducirse lo suficiente, pueden desbordarse del contenedor.
 
-![[Pasted image 20261014190123.png]]
+![Pasted image 20261014190123](Img/Pasted%20image%2020261014190123.png)
 
 ### `flex-wrap: wrap`
 
 Los elementos pasan a otra línea cuando ya no caben en la línea actual, teniendo en cuenta sus dimensiones y el espacio disponible
 
-![[Pasted image 20261014190237.png]]
+![Pasted image 20261014190237](Img/Pasted%20image%2020261014190237.png)
 
 ## Flex items
 

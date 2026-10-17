@@ -285,7 +285,7 @@ La clase no modifica la apariencia por sí sola. Es CSS quien define cómo se ve
 
 Anidar significa colocar un elemento dentro de otro. Esto permite dividir una interfaz en secciones más pequeñas.
 
-![[Pasted image 20261014141618.png]]
+![Pasted image 20261014141618](Img/Pasted%20image%2020261014141618.png)
 
 Codigo equivalente:
 ```html

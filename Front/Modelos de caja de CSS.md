@@ -3,7 +3,7 @@ El navegador representa cada elemento HTML como una caja rectangular para calcul
 
 Cada elemento tiene cuatro capas conceptuales, desde el centro hacia afuera:
 
-![[Pasted image 20261014143100.png]]
+![Pasted image 20261014143100](Img/Pasted%20image%2020261014143100.png)
 
 Parte       ¿Qué representa?
 
@@ -22,7 +22,7 @@ No son intercambiables. Si quieres que el texto no quede pegado al borde de una 
 
 Se mide desde el borde de la propia caja hacia dentro.
 
-![[Pasted image 20261014143650.png]]Puedes controlar cada lado por separado:
+![Pasted image 20261014143650](Img/Pasted%20image%2020261014143650.png)Puedes controlar cada lado por separado:
 ```css
 .tarjeta {
   padding-top: 20px;
@@ -43,7 +43,7 @@ O utilizar la forma abreviada:
 
 Separa la caja de otras cajas o del espacio que la rodea.
 
-![[Pasted image 20261014144142.png]]
+![Pasted image 20261014144142](Img/Pasted%20image%2020261014144142.png)
 
 ¿De qué toma referencia `margin`?
 El margen pertenece a la caja a la que se lo aplicas, pero su efecto se observa en relación con el espacio que la rodea y con las demás cajas. No es un espacio interior que se añade entre el texto y el borde.
